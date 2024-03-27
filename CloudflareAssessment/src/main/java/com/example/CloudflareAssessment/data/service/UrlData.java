@@ -5,12 +5,16 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+/**
+ * Url Data
+ */
 @Entity
 public class UrlData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String originalUrl;
     private String shortUrl;
 
@@ -28,5 +32,7 @@ public class UrlData {
         return this.originalUrl;
     }
 
-    // Getters and setters
+    public String getShortUrl() {
+        return this.shortUrl;
+    }
 }

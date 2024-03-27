@@ -7,6 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * URL shortener Controller
+ */
 @Controller
 @RequestMapping("/api")
 class ShortUrlController {
@@ -29,4 +32,13 @@ class ShortUrlController {
         }
     }
 
+    @DeleteMapping("/removeShortUrl")
+    public ResponseEntity<String> removeShortUrl(@RequestBody String originalUrl) {
+        String shortUrl = urlShortenerService.removeShortUrl(originalUrl);
+        if (shortUrl != null) {
+            return new ResponseEntity<>(shortUrl, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>("URL not found", HttpStatus.NOT_FOUND);
+        }
+    }
 }
