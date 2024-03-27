@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @Controller
 @RequestMapping("/api")
-class ShortUrlController {
+public class ShortUrlController {
     @Autowired
     private UrlShortenerService urlShortenerService;
 

@@ -45,7 +45,7 @@ public class UrlShortenerService {
         urlDataRepository.save(urlData);
 
         // Using base url from localhost server as hosted server for short url is not setup
-        return "http://localhost:8080/api"+shortUrl;
+        return "http://localhost:8080/api/"+shortUrl;
     }
 
     /**
@@ -55,7 +55,6 @@ public class UrlShortenerService {
      */
     public String getOriginalUrl(String shortUrl) {
         UrlData urlData = urlDataRepository.findByShortUrl(shortUrl);
-        System.out.println(shortUrl);
         clicksCounter.increment();
         return urlData != null ? urlData.getOriginalUrl() : null;
     }
