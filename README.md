@@ -37,13 +37,13 @@ Import the project into an IDE of choice with required prereqs supported.
 
 From inside the "cloudflare-assessment/CloudflareAssessment" directory, run the following commands:
 
-1 Build the springboot service
+Build the springboot service
     ./mvnw clean install -DskipTests
   
-2. Build the docker image for url shortener service 
+Build the docker image for url shortener service 
     docker buildx build -f Dockerfile . -t urlshortener:latest
 
-3.Run all the docker containers required to run the APIs, might have to repeat this step as DB takes time to come up as a docker container.
+Run all the docker containers required to run the APIs, might have to repeat this step as DB takes time to come up as a docker container.
     docker-compose -f docker-compose.yml up    
   
 # Testing from COMMAND LINE/TERMINAL
