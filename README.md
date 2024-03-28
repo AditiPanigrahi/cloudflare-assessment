@@ -29,7 +29,7 @@ Assumptions
 # Scalability
 Docker containers can be scaled using a load balancer and kubernetes to manage the multiple instances of the containers.
 
-# Availabilty
+# Availability
 Database container survives system restart so system is available and consistent.
 
 # Build and Run
