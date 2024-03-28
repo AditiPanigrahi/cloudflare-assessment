@@ -10,15 +10,15 @@ Prequisites:
 4. Docker Desktop
 
 
-## Url Shortener Design 
+# Url Shortener Design 
 
-# API design
+## API design:
 I have provided 3 APIs as part of this assessment:
   1. API to shorten a URL
   2. API to redirect a short URL
   3. API to remove/delete a short URL persisted for a long URL in DB
 
-DATABASE: 
+## Database: 
 Since UrlData has a fairly structured data I have used a relational database (MySQL) for persistence of the shortUrl. This can be expanded into a more complex entity with addition of more features.
 
 Assumptions
