@@ -1,11 +1,11 @@
 # cloudflare-assessment
-Project to demonstrate cloudflare assessment for url shortenerA
+Project to demonstrate cloudflare assessment for url shortener.
 
 Please follow instructions to create and run the springboot service locally. After this you can use the curl command to call the API's provided as part of the Url shortener service.
 
 Prequisites:
 1. Mvn
-2. IDE- Sugggest Intellij community version
+2. IDE - Sugggest Intellij community version
 3. Springboot 3.x/JDK 7
 4. Docker Desktop
 
