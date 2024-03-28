@@ -24,7 +24,7 @@ Since UrlData has a fairly structured data I have used a relational database (My
 Assumptions
 1. Url shortener server/host is also localhost so the short URL will have the same base URL as the long URL for this assessment.
 2. Unique short url generation using Base62 encoding is enough for the scope of this assessment.
-3. 
+   
 
 # Scalability
 Docker containers can be scaled using a load balancer and kubernetes to manage the multiple instances of the containers.
@@ -36,6 +36,7 @@ Database container survives system restart so system is available and consistent
 Import the project into an IDE of choice with required prereqs supported.
 
 From inside the "cloudflare-assessment/CloudflareAssessment" directory, run the following commands:
+
 1 Build the springboot service
   ./mvnw clean install -DskipTests./
 
