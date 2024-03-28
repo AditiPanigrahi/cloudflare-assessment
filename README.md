@@ -1,5 +1,5 @@
 # cloudflare-assessment
-Project to demonstrate cloudflare assessment for url shortener
+Project to demonstrate cloudflare assessment for url shortenerA
 
 Please follow instructions to create and run the springboot service locally. After this you can use the curl command to call the API's provided as part of the Url shortener service.
 
@@ -10,25 +10,30 @@ Prequisites:
 4. Docker Desktop
 
 
-Url Shortener Design 
-
-High Level Design
-
+## Url Shortener Design 
 
 # API design
+I have provided 3 APIs as part of this assessment:
+  1. API to shorten a URL
+  2. API to redirect a short URL
+  3. API to remove/delete a short URL persisted for a long URL in DB
+
+DATABASE: 
+Since UrlData has a fairly structured data I have used a relational database (MySQL) for persistence of the shortUrl. This can be expanded into a more complex entity with addition of more features.
 
 Assumptions
-1. Url shortener host is also localhost
+1. Url shortener server/host is also localhost so the short URL will have the same base URL as the long URL for this assessment.
+2. Unique short url generation using Base62 encoding is enough for the scope of this assessment.
+3. 
 
 # Scalability
-
-2. Docker containers can be scaled using a load balancer and kubernetes to manage the multiple instances of the containers.
+Docker containers can be scaled using a load balancer and kubernetes to manage the multiple instances of the containers.
 
 # Availabilty
-
-2. Database container survives system restart
+Database container survives system restart so system is available and consistent.
 
 # Build and Run
+Import the project into an IDE of choice with required prereqs supported.
 
 From inside the "cloudflare-assessment/CloudflareAssessment" directory, run the following commands:
 1 Build the springboot service
@@ -37,7 +42,7 @@ From inside the "cloudflare-assessment/CloudflareAssessment" directory, run the 
 2. Build the docker image for url shortener service 
   docker buildx build -f Dockerfile . -t urlshortener:latest
 
-3.Run all the docker containers required to run the APIs
+3.Run all the docker containers required to run the APIs, might have to repeat this step as DB takes time to come up as a docker container.
   docker-compose -f docker-compose.yml up    
   
 # Testing from COMMAND LINE/TERMINAL
